@@ -17,8 +17,8 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-#for file in $(find $PWD/$1 -name 'package.yaml'); 
-for file in $(cat manifestfiles.txt);
+for file in $(find $PWD/$1 -name 'package.yaml'); 
+#for file in $(cat manifestfiles.txt);
 do 
         dt=$(date '+%d/%m/%Y %H:%M:%S');
         echo "$dt"
