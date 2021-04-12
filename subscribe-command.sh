@@ -134,23 +134,27 @@ for _ in $(seq 1 60); do
         if [[ "$(oc -n "$OO_INSTALL_NAMESPACE" get csv "$CSV" -o jsonpath='{.status.phase}')" == "Succeeded" ]]; then
             echo "ClusterServiceVersion \"$CSV\" ready"
 
-            DEPLOYMENT_ART="oo_deployment_details.yaml"
+            DEPLOYMENT_ART="${CSV}_oo_deployment_details.yaml"
             echo "Saving deployment details in ${DEPLOYMENT_ART} as a shared artifact"
             cat > "${ARTIFACT_DIR}/${DEPLOYMENT_ART}" <<EOF
 ---
 csv: "${CSV}"
 operatorgroup: "${OPERATORGROUP}"
-subscription: "{SUB}"
+subscription: "${SUB}"
 catalogsource: "${CATSRC}"
 install_namespace: "${OO_INSTALL_NAMESPACE}"
 target_namespaces: "${OO_TARGET_NAMESPACES}"
 deployment_start_time: "${DEPLOYMENT_START_TIME}"
 EOF
             cp "${ARTIFACT_DIR}/${DEPLOYMENT_ART}" "${SHARED_DIR}/${DEPLOYMENT_ART}"
+
+            #remove the operator
+            oc delete subscription "$SUB" -n "$OO_INSTALL_NAMESPACE"
+            oc delete clusterserviceversion "$CSV" -n "$OO_INSTALL_NAMESPACE"
             exit 0
         fi
     fi
-    sleep 10
+    sleep 60
 done
 
 echo "Timed out waiting for csv to become ready"
