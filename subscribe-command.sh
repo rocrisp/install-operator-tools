@@ -153,10 +153,10 @@ EOF
             echo "Install Operand"
             oc apply -n $OO_INSTALL_NAMESPACE -f crs/cr0.yml
             echo "Operand RC = ${?}"
-            #remove the operator
-            oc delete project "$OO_INSTALL_NAMESPACE"
+            
             oc delete subscription "$SUB" -n "$OO_INSTALL_NAMESPACE"
             oc delete clusterserviceversion "$CSV" -n "$OO_INSTALL_NAMESPACE"
+            oc delete project "$OO_INSTALL_NAMESPACE"
             exit 0
         fi
     fi

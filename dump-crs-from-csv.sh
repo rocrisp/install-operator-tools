@@ -21,6 +21,5 @@ if [ ! $(which ./jq 2>/dev/null) ]; then
 fi
 
 mkdir -p crs/
-jq --version
 #yq eval '.metadata.annotations.alm-examples' $CSV | jq .[0]
 for i in $(seq 0 $IDX); do ./yq eval '.metadata.annotations.alm-examples' $CSV | jq .[$i] > crs/cr$i.yml; done
