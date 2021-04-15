@@ -1,4 +1,8 @@
 export OO_INDEX="registry.redhat.io/redhat/certified-operator-index:v4.7"
+
+mkdir -p shared_dir/
+mkdir -p artifact_dir/
+
 export ARTIFACT_DIR="artifact_dir"
 export SHARED_DIR="shared_dir"
 
