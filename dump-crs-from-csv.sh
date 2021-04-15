@@ -10,16 +10,16 @@ if [ -z "$CSV" ] || [ -z "$2" ]; then
 	exit 1
 fi
 
-if [ ! $(which yq 2>/dev/null) ]; then
+if [ ! $(which ./yq 2>/dev/null) ]; then
 	echo -e "ERROR: yq not found. Exiting..."
 	exit 2
 fi
 
-if [ ! $(which jq 2>/dev/null) ]; then
+if [ ! $(which ./jq 2>/dev/null) ]; then
 	echo -e "ERROR: jq not found. Exiting..."
 	exit 4
 fi
 
 mkdir -p crs/
 #yq eval '.metadata.annotations.alm-examples' $CSV | jq .[0]
-for i in $(seq 0 $IDX); do yq eval '.metadata.annotations.alm-examples' $CSV | jq .[$i] > crs/cr$i.yml; done
+for i in $(seq 0 $IDX); do ./yq eval '.metadata.annotations.alm-examples' $CSV | ./jq .[$i] > crs/cr$i.yml; done
