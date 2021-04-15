@@ -108,7 +108,7 @@ do
         echo "OO_CHANNEL = $OO_CHANNEL"
         
 
-        output=$(./subscribe-command_test.sh)
+        output=$(./subscribe-command.sh)
         echo "$output"
 
         if [[ $output == *"Timed out waiting for csv to become ready"* ]]; then
