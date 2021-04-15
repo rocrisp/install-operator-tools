@@ -5,10 +5,10 @@ export SHARED_DIR="shared_dir"
 counter=1
 
 ##initiate files
-rm success_operator.txt
-rm success_operand.txt
-rm failed_operator.txt
-rm failed_operand.txt
+rm -f success_operator.txt
+rm -f success_operand.txt
+rm -f failed_operator.txt
+rm -f failed_operand.txt
 
 if [[ "$#" -eq 0 ]]; then
     echo "<Please enter the directory path to the package.yml>"
