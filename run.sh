@@ -38,8 +38,8 @@ do
                 [[ $file == *"anzo-operator"* ]]; then
                 continue
         fi
-        # yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
-        export OO_PACKAGE=$(yq eval '.packageName' $file);
+        # ./yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
+        export OO_PACKAGE=$(./yq eval '.packageName' $file);
 
         echo "------------------------------------"
         echo "Installing Operator $OO_PACKAGE"
@@ -49,11 +49,11 @@ do
         echo $file;
         
         
-        #currentCSV=$(yq eval '.channels.[].currentCSV' $file);
+        #currentCSV=$(./yq eval '.channels.[].currentCSV' $file);
         #echo "Current CSV = $currentCSV"
 
 
-        defaultChannel=$(yq eval '.defaultChannel' $file)
+        defaultChannel=$(./yq eval '.defaultChannel' $file)
         export OO_CHANNEL=$defaultChannel;
 
         currentCSV=$(cat $file | grep -A1 "name: ${defaultChannel}" | grep currentCSV | awk '{ print $2 }');
@@ -66,8 +66,8 @@ do
         do
                 echo "clusterserviceversion.yml : "
                 echo $csvfile;
-                #yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported'
-                export AllNamespaces=$(yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
+                #./yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported'
+                export AllNamespaces=$(./yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
                 echo "installModes.AllNamespaces = $AllNamespaces"
 
                 #Setup cr file
@@ -90,8 +90,8 @@ do
         ##find metadata.namespace per
         #manifests-616344862/instana-agent/instana-agent-z73s1az3/1.0.2/instana-agent-operator.clusterserviceversion.yaml
         #Replace namaspace with cr.namespace
-        #yq eval '.metadata.annotations.alm-examples' $csvfile | jq .[].metadata.namespace
-        cr_namespace=$(yq eval '.metadata.annotations.alm-examples' $csvfile | jq -r .[].metadata.namespace)
+        #./yq eval '.metadata.annotations.alm-examples' $csvfile | jq .[].metadata.namespace
+        cr_namespace=$(./yq eval '.metadata.annotations.alm-examples' $csvfile | jq -r .[].metadata.namespace)
         echo "metadata.namespace = $cr_namespace"
         if [[ $cr_namespace == *"null"* ]]; then
                 echo "namespace is NOT in cr."
