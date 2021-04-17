@@ -100,7 +100,7 @@ do
         cr_namespace=$(./yq eval '.metadata.namespace' $CR_YML)
         echo "metadata.namespace = $cr_namespace"
         if [[ $cr_namespace == *"null"* ]]; then
-                echo "namespace is NOT in cr."
+                echo "metadata.namespace is NOT in the cr, so set OO_INSTALL_NAMESPACE to !create otherwise set it to the namespace"
                 export OO_INSTALL_NAMESPACE="!create"
         else
                 echo "namespace IS defined in cr."
@@ -113,9 +113,15 @@ do
         echo "OO_PACKAGE = $OO_PACKAGE"
         echo "OO_CHANNEL = $OO_CHANNEL"
         
+        error_file="errorfile.txt"
+        output=$(./subscribe-command_test.sh 2>$error_file)
+        err=$(< $error_file)
+        rm $error_file
 
-        output=$(./subscribe-command.sh)
         echo "$output"
+        echo "-------------------"
+        echo "$err"
+
 
         if [[ $output == *"Timed out waiting for csv to become ready"* ]]; then
                 echo $'------------------\n' >> failed_operator.txt
@@ -131,7 +137,7 @@ do
                    echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
                 else 
                    echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
-                   echo "$output" >> failed_operand.txt
+                   echo "$err" >> failed_operand.txt
                 fi
         else
                 echo $OO_PACKAGE >> failed_operator.txt
