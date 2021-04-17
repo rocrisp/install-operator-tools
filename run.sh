@@ -5,6 +5,8 @@ mkdir -p artifact_dir/
 
 export ARTIFACT_DIR="artifact_dir"
 export SHARED_DIR="shared_dir"
+# CR for the operand
+export CR_YML="crs/cr0.yml"
 
 counter=1
 
@@ -95,7 +97,7 @@ do
         #manifests-616344862/instana-agent/instana-agent-z73s1az3/1.0.2/instana-agent-operator.clusterserviceversion.yaml
         #Replace namaspace with cr.namespace
         #./yq eval '.metadata.annotations.alm-examples' $csvfile | jq .[].metadata.namespace
-        cr_namespace=$(./yq eval '.metadata.annotations.alm-examples' $csvfile | jq -r .[].metadata.namespace)
+        cr_namespace=$(./yq eval '.metadata.namespace' $CR_YML)
         echo "metadata.namespace = $cr_namespace"
         if [[ $cr_namespace == *"null"* ]]; then
                 echo "namespace is NOT in cr."
