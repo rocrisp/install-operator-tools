@@ -160,7 +160,7 @@ EOF
             exit 0
         fi
     fi
-    sleep 40
+    sleep 15
 done
 
 echo "Timed out waiting for csv to become ready"
