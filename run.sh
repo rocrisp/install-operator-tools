@@ -114,7 +114,7 @@ do
         echo "OO_CHANNEL = $OO_CHANNEL"
         
         error_file="errorfile.txt"
-        output=$(./subscribe-command_test.sh 2>$error_file)
+        output=$(./subscribe-command.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
 
