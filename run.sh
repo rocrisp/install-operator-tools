@@ -47,7 +47,7 @@ do
         # ./yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
         export OO_PACKAGE=$(./yq eval '.packageName' $file);
 
-        echo "------------------------------------"
+        echo "---------------$counter---------------------"
         echo "Installing Operator $OO_PACKAGE"
         echo "Start time : ${dt}"
         echo $'----------------------------\n'	
