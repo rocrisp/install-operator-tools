@@ -41,6 +41,7 @@ do
                 [[ $file == *"nvmesh-operator"* ]] ||
                 [[ $file == *"anzograph-operator"* ]] ||
                 [[ $file == *"cic-operator-with-crds"* ]] ||
+                [[ $file == *"federatorai-certified"* ]] ||
                 [[ $file == *"anzo-operator"* ]]; then
                 continue
         fi
