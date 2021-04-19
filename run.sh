@@ -28,19 +28,20 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-for file in $(find $PWD/$1 -name 'package.yaml'); 
+for file in $(find $PWD/$1 -name '*package.yaml' | sort -n); 
 #for file in $(cat test-inputfile.txt);
 do 
         dt=$(date '+%d/%m/%Y %H:%M:%S');
         
         csvpath="$(dirname "${file}")"
 
-        if [[ $file == *"mongodb-enterprise"* ]] ||
+        if      [[ $file == *"mongodb-enterprise"* ]] ||
                 [[ $file == *"aqua-operator-certified"* ]] ||
                 [[ $file == *"stonebranch-universalagent-operator-certified"* ]] ||
                 [[ $file == *"nvmesh-operator"* ]] ||
                 [[ $file == *"anzograph-operator"* ]] ||
                 [[ $file == *"cic-operator-with-crds"* ]] ||
+                [[ $file == *"redhat-marketplace-operator"* ]] ||
                 [[ $file == *"federatorai-certified"* ]] ||
                 [[ $file == *"anzo-operator"* ]]; then
                 continue
@@ -64,28 +65,32 @@ do
         export OO_CHANNEL=$defaultChannel;
 
         currentCSV=$(cat $file | grep -A1 "name: ${defaultChannel}" | grep currentCSV | awk '{ print $2 }');
+        
+        ##do this if the format is different
+        if [[ -z "$currentCSV" ]]; then
+           currentCSV=$(yq eval '.channels[].currentCSV' $file)
+        fi
+
         echo "currentCSV for defaultChannel $defaultChannel : $currentCSV"
 
         csvdir=$(echo $currentCSV | cut -d'.' -f2- | sed 's/v//');
 
-        countfiles=0
-        for csvfile in $(find $csvpath/$csvdir -name '*.clusterserviceversion.yaml');
-        do
-                echo "clusterserviceversion.yml : "
-                echo $csvfile;
-                #./yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported'
-                export AllNamespaces=$(./yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
-                echo "installModes.AllNamespaces = $AllNamespaces"
-
-                #Setup cr file
-                ./dump-crs-from-csv.sh $csvfile 1
-                (( countfiles++ ))
-        done
-
-        if [[ $countfiles > 1 ]] 
-        then 
-                echo "found more than one cvs file"
+        
+        csvfile=$(find $csvpath/$csvdir -name '*.clusterserviceversion.yaml');
+        
+        #do this if csvfile is on the same path as the package.yaml
+        if [[ -z "$csvfile" ]]; then
+           echo "file not found in $csvdir"
+           csvfile=$(find $csvpath -name "$currentCSV.clusterserviceversion.yaml");
         fi
+
+        echo "clusterserviceversion.yml : $csvfile"
+        
+        export AllNamespaces=$(./yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
+        echo "installModes.AllNamespaces = $AllNamespaces"
+        
+        #Setup cr file
+        ./dump-crs-from-csv.sh $csvfile 1
 
         if [[ $AllNamespaces == "false" ]]; then
                 #set OO_TARGET_NAMESPACES
