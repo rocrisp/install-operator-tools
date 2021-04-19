@@ -1,8 +1,5 @@
-# install-operator-tools
+#Offline-cataloger, yq, jq works on Unix. 
 
-Install offline-catalog
-https://github.com/kevinrizza/offline-cataloger
+./offline-cataloger generate-manifests "certified-operators"
 
-Download certified operators
-
-./run <manifest-directory>
+./run.sh <manifest-directory>
