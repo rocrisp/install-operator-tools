@@ -1,17 +1,19 @@
 export OO_INDEX="registry.redhat.io/redhat/certified-operator-index:v4.7"
-
-mkdir -p shared_dir/
-mkdir -p artifact_dir/
-
 export ARTIFACT_DIR="artifact_dir"
 export SHARED_DIR="shared_dir"
-# CR for the operand
 export CR_YML="crs/cr0.yml"
 export RUNOPERAND="true"
+export SOURCEOFTRUTH="operatorlist.txt"
+
+#yq for local testing
+#export YQ="yq"
+#yq for jenkins server
+export YQ="./yq"
 
 counter=1
 
 ##initiate files
+
 rm -f success_operator.txt
 rm -f success_operand.txt
 rm -f failed_operator.txt
@@ -25,7 +27,7 @@ if [[ "$#" -eq 0 ]]; then
 while [[ "$#" -gt 0 ]]; do
     case $1 in
         -h|--help) display_help; shift ;;
-         -nooperand) export RUNOPERAND="false" ;;
+        -nooperand) export RUNOPERAND="false" ;;
     esac
     shift
 done
@@ -45,41 +47,42 @@ do
                 [[ $file == *"nvmesh-operator"* ]] ||
                 [[ $file == *"anzograph-operator"* ]] ||
                 [[ $file == *"cic-operator-with-crds"* ]] ||
-                [[ $file == *"redhat-marketplace-operator"* ]] ||
-                [[ $file == *"federatorai-certified"* ]] ||
+                [[ $file == *"data-explorer-operator-certified"* ]] ||
                 [[ $file == *"anzo-operator"* ]]; then
                 continue
         fi
-        # ./yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
-        export OO_PACKAGE=$(./yq eval '.packageName' $file);
-
-        echo "---------------$counter---------------------"
+        # yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
+        export OO_PACKAGE=$($YQ eval '.packageName' $file);
+        echo ""
+        echo "--------------$counter----------------------"
         echo "Installing Operator $OO_PACKAGE"
         echo "Start time : ${dt}"
-        echo $'----------------------------\n'	
+        echo $'--------------------------------------\n'	
         echo "Package.yaml :"
         echo $file;
         
-        
-        #currentCSV=$(./yq eval '.channels.[].currentCSV' $file);
-        #echo "Current CSV = $currentCSV"
+        echo "Run ./status.sh $SOURCEOFTRUTH $OO_PACKAGE"
+        operator_status=$(./status.sh $SOURCEOFTRUTH $OO_PACKAGE)
 
+        if [[ $operator_status == "Found" ]]; then
+           echo "skip $OO_PACKAGE. Already installed"
+           ((counter++))
+           continue
+        fi
 
-        defaultChannel=$(./yq eval '.defaultChannel' $file)
+        defaultChannel=$($YQ eval '.defaultChannel' $file)
         export OO_CHANNEL=$defaultChannel;
 
         currentCSV=$(cat $file | grep -A1 "name: ${defaultChannel}" | grep currentCSV | awk '{ print $2 }');
         
         ##do this if the format is different
         if [[ -z "$currentCSV" ]]; then
-           currentCSV=$(yq eval '.channels[].currentCSV' $file)
+           currentCSV=$($YQ eval '.channels[].currentCSV' $file)
         fi
 
         echo "currentCSV for defaultChannel $defaultChannel : $currentCSV"
-
         csvdir=$(echo $currentCSV | cut -d'.' -f2- | sed 's/v//');
 
-        
         csvfile=$(find $csvpath/$csvdir -name '*.clusterserviceversion.yaml');
         
         #do this if csvfile is on the same path as the package.yaml
@@ -90,11 +93,12 @@ do
 
         echo "clusterserviceversion.yml : $csvfile"
         
-        export AllNamespaces=$(./yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
+        export AllNamespaces=$($YQ eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
         echo "installModes.AllNamespaces = $AllNamespaces"
         
         #Setup cr file
         ./dump-crs-from-csv.sh $csvfile 1
+        
 
         if [[ $AllNamespaces == "false" ]]; then
                 #set OO_TARGET_NAMESPACES
@@ -106,11 +110,12 @@ do
         ##find metadata.namespace per
         #manifests-616344862/instana-agent/instana-agent-z73s1az3/1.0.2/instana-agent-operator.clusterserviceversion.yaml
         #Replace namaspace with cr.namespace
-        #./yq eval '.metadata.annotations.alm-examples' $csvfile | jq .[].metadata.namespace
-        cr_namespace=$(./yq eval '.metadata.namespace' $CR_YML)
+        #yq eval '.metadata.annotations.alm-examples' $csvfile | jq .[].metadata.namespace
+        echo "cr_yaml is $CR_YML"
+        cr_namespace=$($YQ eval '.metadata.namespace' $CR_YML)
         echo "metadata.namespace = $cr_namespace"
         if [[ $cr_namespace == *"null"* ]]; then
-                echo "metadata.namespace is NOT in the cr, so set OO_INSTALL_NAMESPACE to !create otherwise set it to the namespace"
+                echo "namespace is NOT in cr, so set OO_INSTALL_NAMESPACE to !create otherwise set it to the namespace"
                 export OO_INSTALL_NAMESPACE="!create"
         else
                 echo "namespace IS defined in cr."
@@ -123,10 +128,9 @@ do
         echo "OO_PACKAGE = $OO_PACKAGE"
         echo "OO_CHANNEL = $OO_CHANNEL"
         
+        echo "Run ./subscribe-command_test.sh"
+        
         error_file="errorfile.txt"
-
-        echo " Run ./subscribe-command.sh"
-
         output=$(./subscribe-command.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
@@ -135,36 +139,47 @@ do
         echo "-------------------"
         echo "$err"
 
-
         if [[ $output == *"Timed out waiting for csv to become ready"* ]]; then
                 echo $'------------------\n' >> failed_operator.txt
                 echo "Failed to install operator:$counter $OO_PACKAGE" >> failed_operator.txt
                 echo "$output" >> failed_operator.txt
                 echo $'------------------\n' >> failed_operator.txt
+                echo "Run ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE no"
+                ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE no
 
         elif [[ $output == *"ClusterServiceVersion \""*"\" ready"* ]]; then
                 echo "Success installed operator:$counter $OO_PACKAGE" >> success_operator.txt
 
-                if  [[ $RUNOPERAND == "true" ]]; then
+                #update source of truth
+                echo "Run ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE yes"
+                ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE yes
                 
+                if  [[ $RUNOPERAND == "true" ]]; then
+
                         ###Did the operand Installed siccessfully ?
                         if [[ $output == *"Operand RC = 0"* ]]; then
-                        echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
+                           echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
+                           echo "Run ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE yes yes"
+                           ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE yes yes
                         else 
-                        echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
-                        echo "$err" >> failed_operand.txt
+                           echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
+                           echo "$err" >> failed_operand.txt
+                           echo "Run ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE yes no"
+                           ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE yes no
                         fi
                 fi
         else
+                echo "Run ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE no"
+                ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE no no
                 echo $OO_PACKAGE >> failed_operator.txt
                 echo "$output" >> failed_operator.txt
                 echo $'------------------\n' >> failed_operator.txt  
         fi
 
         ((counter++))
-        echo "------------------------------------"
+        echo "--------------------------------------"
         echo "Finish Installing Operator $OO_PACKAGE"
-        echo $'----------------------------\n'
+        echo $'--------------------------------------\n'
 
 done
 
