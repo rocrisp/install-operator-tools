@@ -41,16 +41,6 @@ do
         
         csvpath="$(dirname "${file}")"
 
-        if      [[ $file == *"mongodb-enterprise"* ]] ||
-                [[ $file == *"aqua-operator-certified"* ]] ||
-                [[ $file == *"stonebranch-universalagent-operator-certified"* ]] ||
-                [[ $file == *"nvmesh-operator"* ]] ||
-                [[ $file == *"anzograph-operator"* ]] ||
-                [[ $file == *"cic-operator-with-crds"* ]] ||
-                [[ $file == *"data-explorer-operator-certified"* ]] ||
-                [[ $file == *"anzo-operator"* ]]; then
-                continue
-        fi
         # yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
         export OO_PACKAGE=$($YQ eval '.packageName' $file);
         echo ""
@@ -60,6 +50,19 @@ do
         echo $'--------------------------------------\n'	
         echo "Package.yaml :"
         echo $file;
+
+        if      [[ $file == *"mongodb-enterprise"* ]] ||
+                [[ $file == *"aqua-operator-certified"* ]] ||
+                [[ $file == *"stonebranch-universalagent-operator-certified"* ]] ||
+                [[ $file == *"nvmesh-operator"* ]] ||
+                [[ $file == *"anzograph-operator"* ]] ||
+                [[ $file == *"cic-operator-with-crds"* ]] ||
+                [[ $file == *"data-explorer-operator-certified"* ]] ||
+                [[ $file == *"anzo-operator"* ]]; then
+                echo "skip $OO_PACKAGE. Problem installing. Skip it."
+                ((counter++))
+                continue
+        fi
         
         echo "Run ./status.sh $SOURCEOFTRUTH $OO_PACKAGE"
         operator_status=$(./status.sh $SOURCEOFTRUTH $OO_PACKAGE)
