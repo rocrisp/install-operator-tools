@@ -7,6 +7,7 @@ export ARTIFACT_DIR="artifact_dir"
 export SHARED_DIR="shared_dir"
 # CR for the operand
 export CR_YML="crs/cr0.yml"
+export RUNOPERAND="true"
 
 counter=1
 
@@ -24,9 +25,12 @@ if [[ "$#" -eq 0 ]]; then
 while [[ "$#" -gt 0 ]]; do
     case $1 in
         -h|--help) display_help; shift ;;
+         -nooperand) export RUNOPERAND="false" ;;
     esac
     shift
 done
+
+echo "RUNOPERAND : $RUNOPERAND"
 
 for file in $(find $PWD/$1 -name '*package.yaml' | sort -n); 
 #for file in $(cat test-inputfile.txt);
@@ -120,6 +124,9 @@ do
         echo "OO_CHANNEL = $OO_CHANNEL"
         
         error_file="errorfile.txt"
+
+        echo " Run ./subscribe-command.sh"
+
         output=$(./subscribe-command.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
@@ -137,13 +144,16 @@ do
 
         elif [[ $output == *"ClusterServiceVersion \""*"\" ready"* ]]; then
                 echo "Success installed operator:$counter $OO_PACKAGE" >> success_operator.txt
+
+                if  [[ $RUNOPERAND == "true" ]]; then
                 
-                ###Did the operand Installed siccessfully ?
-                if [[ $output == *"Operand RC = 0"* ]]; then
-                   echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
-                else 
-                   echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
-                   echo "$err" >> failed_operand.txt
+                        ###Did the operand Installed siccessfully ?
+                        if [[ $output == *"Operand RC = 0"* ]]; then
+                        echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
+                        else 
+                        echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
+                        echo "$err" >> failed_operand.txt
+                        fi
                 fi
         else
                 echo $OO_PACKAGE >> failed_operator.txt

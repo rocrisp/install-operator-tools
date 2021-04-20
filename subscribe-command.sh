@@ -148,11 +148,13 @@ deployment_start_time: "${DEPLOYMENT_START_TIME}"
 EOF
             cp "${ARTIFACT_DIR}/${DEPLOYMENT_ART}" "${SHARED_DIR}/${DEPLOYMENT_ART}"
 
-            #install Operand
-            set +e
-            echo "Install Operand"
-            oc apply -n $OO_INSTALL_NAMESPACE -f crs/cr0.yml
-            echo "Operand RC = ${?}"
+            if  [[ $RUNOPERAND == "true" ]]; then
+                #install Operand
+                set +e
+                echo "Install Operand"
+                oc apply -n $OO_INSTALL_NAMESPACE -f crs/cr0.yml
+                echo "Operand RC = ${?}"
+            fi
             
             oc delete subscription "$SUB" -n "$OO_INSTALL_NAMESPACE"
             oc delete clusterserviceversion "$CSV" -n "$OO_INSTALL_NAMESPACE"
