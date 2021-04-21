@@ -3,10 +3,10 @@ echo "Source of Truth : $1"
 total=$(cat $1 | wc -l)
 echo "Total number of Certified Operators :                                          $total"
 
-tested=$(grep -E 'yes:yes|yes:no|no:' $1 | wc -l)
-success=$(grep -o "yes:yes" $1 | wc -l)
-failed_operand=$(grep -o "yes:no" $1 | wc -l)
-failed=$(grep -o "no:" $1 | wc -l)
+tested=$(grep -E 'yes:yes|yes:no|no:|yes' $1 | wc -l)
+success=$(grep -E 'yes:yes' $1 | wc -l)
+failed_operand=$(grep -E "yes:no" $1 | wc -l)
+failed=$(grep -E "no:" $1 | wc -l)
 
 
 echo "Total number of Operator tested :                                              $tested"

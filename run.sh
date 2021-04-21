@@ -1,3 +1,5 @@
+### set env variable RETRY=TRUE to re-install operators which have failed.
+
 export OO_INDEX="registry.redhat.io/redhat/certified-operator-index:v4.7"
 export ARTIFACT_DIR="artifact_dir"
 export SHARED_DIR="shared_dir"
@@ -12,12 +14,14 @@ export YQ="./yq"
 
 counter=1
 
+echo "------------print env---------------------"
+
 ##initiate files
 
-rm -f success_operator.txt
-rm -f success_operand.txt
-rm -f failed_operator.txt
-rm -f failed_operand.txt
+# rm -f success_operator.txt
+# rm -f success_operand.txt
+# rm -f failed_operator.txt
+# rm -f failed_operand.txt
 
 if [[ "$#" -eq 0 ]]; then
     echo "<Please enter the directory path to the package.yml>"
@@ -46,27 +50,68 @@ do
         echo "Installing Operator $OO_PACKAGE"
         echo "Start time : ${dt}"
         echo $'--------------------------------------\n'	
-        echo "Package.yaml :"
-        echo $file;
+        echo "Package.yaml : $file"
 
-        if      [[ $file == *"mongodb-enterprise"* ]] ||
-                [[ $file == *"aqua-operator-certified"* ]] ||
-                [[ $file == *"stonebranch-universalagent-operator-certified"* ]] ||
-                [[ $file == *"nvmesh-operator"* ]] ||
-                [[ $file == *"anzograph-operator"* ]] ||
-                [[ $file == *"cic-operator-with-crds"* ]] ||
+        if      # Missing in OperatorHub
+                [[ $file == *"cilium"* ]] ||
+                [[ $file == *"cortex-operator"* ]] ||
+                [[ $file == *"epsagon-operator-certified"* ]] ||
+                [[ $file == *"ocean-operator"* ]] ||
+                [[ $file == *"newrelic-infrastructure"* ]] ||
+                [[ $file == *"erynis-operator"* ]] ||
+                [[ $file == *"ubix-operator"* ]] ||
+                [[ $file == *"driverlessai-deployment-operator-certified"* ]] ||
+                [[ $file == *"gitlab-operator"* ]] ||
+                [[ $file == *"triggermesh-operator"* ]] || #search for triggermesh AWS sources operator popped up
+                [[ $file == *"trains-operator-certified"* ]] ||
+                [[ $file == *"ibm-auditlogging-operator-app"* ]] ||
+                [[ $file == *"ibm-helm-repo-operator-app"* ]] ||
+                [[ $file == *"ibm-management-ingress-operator-app"* ]] ||
+                [[ $file == *"ibm-mongodb-operator-app"* ]] ||
+                [[ $file == *"ibm-platform-api-operator-app"* ]] ||
+                [[ $file == *"ibm-monitoring-grafana-operator-app"* ]] ||
+                [[ $file == *"traefikee-certified"* ]] ||
+                [[ $file == *"planetscale-certified"* ]] ||
+                [[ $file == *"tidb-operator-certified"* ]] || # TiDB Operator Community exist
+                
+                # Only in Marketplace
+                [[ $file == *"cass-operator"* ]] ||
+                [[ $file == *"open-enterprise-spinnaker"* ]] ||
+                [[ $file == *"robin-storage-trial"* ]] || #same as robin-storage-express
+                [[ $file == *"robin-storage-express"* ]] ||
+                
+                [[ $file == *"universalagent-operator-certified"* ]] || #unable to install by automation. seems to be connected to stonebranch-universalagent-operator-certified
+                
+                #unable to install by automation and manual.
+                [[ $file == *"cockroachdb-certified"* ]] || #The default channel is set to beta, but there's new version stable
                 [[ $file == *"data-explorer-operator-certified"* ]] ||
-                [[ $file == *"anzo-operator"* ]]; then
-                echo "skip $OO_PACKAGE. Problem installing. Skip it."
-                ((counter++))
-                continue
+                [[ $file == *"twistlock-certified"* ]] || #related to prisma-cloud-compute-console-operator.v2.0.1
+                [[ $file == *"prisma-cloud-compute-console-operator.v2.0.1"* ]] ||
+                [[ $file == *"gitlab-operator"* ]] ||
+                [[ $file == *"presto-operator"* ]] ||
+
+                #unable to install by automation, but installed by manual.
+                [[ $file == *"storageos"* ]] || #related to storageos2 which installed.
+                [[ $file == *"portshift-operator"* ]] ||
+                [[ $file == *"crunchy-postgres-operator"* ]];                
+                
+                then
+                   echo "Skip $OO_PACKAGE with operator had problems installing on a cluster."
+                   ((counter++))
+                   continue
         fi
         
         echo "Run ./status.sh $SOURCEOFTRUTH $OO_PACKAGE"
         operator_status=$(./status.sh $SOURCEOFTRUTH $OO_PACKAGE)
 
-        if [[ $operator_status == "Found" ]]; then
-           echo "skip $OO_PACKAGE. Already installed"
+        ### if yes or no is found
+        if [[ $operator_status == "Found" && $RETRY == "NO" ]]; then
+           echo "Skip $OO_PACKAGE with operator already installed on a cluster"
+           ((counter++))
+           continue
+        ### if no: is found   
+        elif [[ $operator_status == "Notfound" && $RETRY == "YES" ]]; then
+           echo "Skip $OO_PACKAGE with operator installed successfully on a cluster."
            ((counter++))
            continue
         fi
@@ -132,7 +177,7 @@ do
         echo "Run ./subscribe-command.sh"
         
         error_file="errorfile.txt"
-        output=$(./subscribe-command.sh 2>$error_file)
+        output=$(./subscribe-command_test.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
 
