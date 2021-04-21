@@ -24,15 +24,13 @@ if [[ "$#" -eq 0 ]]; then
     exit;
  fi
 
-while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        -h|--help) display_help; shift ;;
-        -nooperand) export RUNOPERAND="false" ;;
-    esac
-    shift
-done
+if [[ $2 == "-nooperand" ]]; then
+   export RUNOPERAND="false"
+fi
 
-echo "RUNOPERAND : $RUNOPERAND"
+echo "Install Operand : $RUNOPERAND"
+
+echo "Run find $PWD/$1 -name '*package.yaml' | sort -n"
 
 for file in $(find $PWD/$1 -name '*package.yaml' | sort -n); 
 #for file in $(cat test-inputfile.txt);
@@ -131,7 +129,7 @@ do
         echo "OO_PACKAGE = $OO_PACKAGE"
         echo "OO_CHANNEL = $OO_CHANNEL"
         
-        echo "Run ./subscribe-command_test.sh"
+        echo "Run ./subscribe-command.sh"
         
         error_file="errorfile.txt"
         output=$(./subscribe-command.sh 2>$error_file)
