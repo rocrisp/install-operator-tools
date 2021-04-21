@@ -19,7 +19,7 @@ bacula-operator2:yes:yes
 behavior-analytics-services-operator-certified:yes:yes
 blackduck-connector-operator:yes:yes
 can-operator:yes:yes
-cass-operator:no:
+cass-operator:yes:yes
 cert-manager-operator:yes:yes
 cic-operator-with-crds:yes:yes
 cic-operator:yes:yes
@@ -40,7 +40,7 @@ cortex-operator:no:
 couchbase-enterprise-certified:yes:no
 couchdb-operator-certified:yes:yes
 cpx-cic-operator:yes:yes
-crunchy-postgres-operator:no:
+crunchy-postgres-operator:yes:yes
 cyberarmor-operator-certified:yes:yes
 data-explorer-operator-certified:no:
 datadog-operator-certified:yes:yes
@@ -142,7 +142,7 @@ snyk-operator-certified:yes:yes
 splunk-certified:yes:yes
 stonebranch-universalagent-operator-certified:yes:yes
 storageos2:yes:yes
-storageos:no:
+storageos:yes:yes
 synopsys-certified:yes:yes
 sysdig-certified:yes:yes
 t8c-certified:yes:yes
@@ -154,11 +154,11 @@ traefikee-certified:no:
 traefikee-redhat-certified:yes:yes
 trains-operator-certified:no:
 transform-adv-operator:yes:yes
-triggermesh-operator:no:
+triggermesh-operator:yes:yes
 twistlock-certified:no:
 ubix-operator:no:
 uma-operator:yes:yes
-universalagent-operator-certified:yes:no
+universalagent-operator-certified:yes:yes
 vfunction-server-operator:yes:yes
 vprotect-operator:yes:yes
 wavefront-operator:yes:yes

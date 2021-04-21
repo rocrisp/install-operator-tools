@@ -53,6 +53,7 @@ do
         echo "Package.yaml : $file"
 
         if      # Missing in OperatorHub
+                [[ $file == *"armo-operator-certified"* ]] ||
                 [[ $file == *"cilium"* ]] ||
                 [[ $file == *"cortex-operator"* ]] ||
                 [[ $file == *"epsagon-operator-certified"* ]] ||
@@ -62,9 +63,9 @@ do
                 [[ $file == *"ubix-operator"* ]] ||
                 [[ $file == *"driverlessai-deployment-operator-certified"* ]] ||
                 [[ $file == *"gitlab-operator"* ]] ||
-                [[ $file == *"triggermesh-operator"* ]] || #search for triggermesh AWS sources operator popped up
                 [[ $file == *"trains-operator-certified"* ]] ||
                 [[ $file == *"ibm-auditlogging-operator-app"* ]] ||
+                [[ $file == *"ibm-helm-api-operator-app"* ]] ||
                 [[ $file == *"ibm-helm-repo-operator-app"* ]] ||
                 [[ $file == *"ibm-management-ingress-operator-app"* ]] ||
                 [[ $file == *"ibm-mongodb-operator-app"* ]] ||
@@ -75,24 +76,23 @@ do
                 [[ $file == *"tidb-operator-certified"* ]] || # TiDB Operator Community exist
                 
                 # Only in Marketplace
-                [[ $file == *"cass-operator"* ]] ||
                 [[ $file == *"open-enterprise-spinnaker"* ]] ||
                 [[ $file == *"robin-storage-trial"* ]] || #same as robin-storage-express
                 [[ $file == *"robin-storage-express"* ]] ||
-                
-                [[ $file == *"universalagent-operator-certified"* ]] || #unable to install by automation. seems to be connected to stonebranch-universalagent-operator-certified
                 
                 #unable to install by automation and manual.
                 [[ $file == *"cockroachdb-certified"* ]] || #The default channel is set to beta, but there's new version stable
                 [[ $file == *"data-explorer-operator-certified"* ]] ||
                 [[ $file == *"twistlock-certified"* ]] || #related to prisma-cloud-compute-console-operator.v2.0.1
                 [[ $file == *"prisma-cloud-compute-console-operator.v2.0.1"* ]] ||
-                [[ $file == *"gitlab-operator"* ]] ||
                 [[ $file == *"presto-operator"* ]] ||
 
                 #unable to install by automation, but installed by manual.
+                [[ $file == *"cass-operator"* ]] ||
                 [[ $file == *"storageos"* ]] || #related to storageos2 which installed.
                 [[ $file == *"portshift-operator"* ]] ||
+                [[ $file == *"triggermesh-operator"* ]] || #search for triggermesh AWS sources operator popped up
+                [[ $file == *"universalagent-operator-certified"* ]] || #unable to install by automation. seems to be connected to stonebranch-universalagent-operator-certified
                 [[ $file == *"crunchy-postgres-operator"* ]];                
                 
                 then
@@ -174,10 +174,10 @@ do
         echo "OO_PACKAGE = $OO_PACKAGE"
         echo "OO_CHANNEL = $OO_CHANNEL"
         
-        echo "Run ./subscribe-command.sh"
+        echo "Run ./subscribe-command_test.sh"
         
         error_file="errorfile.txt"
-        output=$(./subscribe-command_test.sh 2>$error_file)
+        output=$(./subscribe-command.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
 
