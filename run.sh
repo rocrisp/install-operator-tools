@@ -170,8 +170,6 @@ do
                         fi
                 fi
         else
-                echo "Run ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE no"
-                ./updatefile.sh $SOURCEOFTRUTH $OO_PACKAGE no no
                 echo $OO_PACKAGE >> failed_operator.txt
                 echo "$output" >> failed_operator.txt
                 echo $'------------------\n' >> failed_operator.txt  
