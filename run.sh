@@ -109,9 +109,16 @@ do
            echo "Skip $OO_PACKAGE with operator already installed on a cluster"
            ((counter++))
            continue
+           
         ### if no: is found   
         elif [[ $operator_status == "Notfound" && $RETRY == "YES" ]]; then
            echo "Skip $OO_PACKAGE with operator installed successfully on a cluster."
+           ((counter++))
+           continue
+
+        ### if yes: is found   
+        elif [[ $operator_status == "Notfound" && $NEWTEST == "YES" ]]; then
+           echo "Skip $OO_PACKAGE with operator NOT installed successfully on a cluster."
            ((counter++))
            continue
         fi
@@ -174,7 +181,7 @@ do
         echo "OO_PACKAGE = $OO_PACKAGE"
         echo "OO_CHANNEL = $OO_CHANNEL"
         
-        echo "Run ./subscribe-command_test.sh"
+        echo "Run ./subscribe-command.sh"
         
         error_file="errorfile.txt"
         output=$(./subscribe-command.sh 2>$error_file)

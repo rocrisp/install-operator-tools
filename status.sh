@@ -8,6 +8,11 @@ if [[ $RETRY == "YES" ]]; then
       echo "Found"
    else echo "Notfound"
    fi
+elif [[ $NEWTEST == "YES" ]]; then
+   if [[ "$status " =~ (yes:|yes:no) ]]; then
+      echo "Found"
+   else echo "Notfound"
+   fi
 else
     if [[ "$status " =~ (yes:|no:) ]]; then
        echo "Found"
