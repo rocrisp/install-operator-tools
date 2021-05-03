@@ -13,4 +13,4 @@ linux/offline-cataloger generate-manifests "certified-operators"
 
 #How to run Test
 
-bin/run.sh <manifest-directory>
+bin/run.sh manifest-directory
