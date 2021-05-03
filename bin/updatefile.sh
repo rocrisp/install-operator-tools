@@ -5,6 +5,9 @@ echo "file is $1"
 #update the file
 echo " adding $2 $3 $4"
 
+#OS dependent tools
+unameOut="$(uname -s)"
+
 if [[ $unameOut == "Darwin" ]]; then
    echo "OS=Darwin"
    sed -i '' "s/.*$2.*/$2:$3:$4/w changelog.txt" $1
