@@ -4,7 +4,9 @@ echo "file is $1"
 
 #update the file
 echo " adding $2 $3 $4"
-sed -i '.backup' "s/.*$2.*/$2:$3:$4/w changelog.txt" $1
+
+sed -i "s/.*$2.*/$2:$3:$4/w changelog.txt" $1
+
 echo $?
 
 if [ -s changelog.txt ]; then
