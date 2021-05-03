@@ -1,3 +1,4 @@
+#permission to execute for everyone
 echo "Update Source of Truth"
 echo "file is $1"
 
