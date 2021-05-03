@@ -196,7 +196,7 @@ do
         echo "Run bin/subscribe-command.sh"
         
         error_file="errorfile.txt"
-        output=$(bin/subscribe-command_test.sh 2>$error_file)
+        output=$(bin/subscribe-command.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
 
