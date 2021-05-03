@@ -167,7 +167,7 @@ do
         
         #Setup cr file
         echo "Run dump-crs-from-csv.sh"
-        ./dump-crs-from-csv.sh $csvfile 1
+        bin/dump-crs-from-csv.sh $csvfile 1
         
 
         if [[ $AllNamespaces == "false" ]]; then
@@ -192,12 +192,11 @@ do
 
         echo print vars
         env | grep OO_
-        exit
         
-        echo "Run ./subscribe-command.sh"
+        echo "Run bin/subscribe-command.sh"
         
         error_file="errorfile.txt"
-        output=$(./subscribe-command_test.sh 2>$error_file)
+        output=$(bin/subscribe-command_test.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
 

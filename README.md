@@ -7,7 +7,7 @@ k8s cluster available
 mac/offline-cataloger generate-manifests "certified-operators"
 
 #From Linux
-mac/offline-cataloger generate-manifests "certified-operators"
+linux/offline-cataloger generate-manifests "certified-operators"
 
 #How to run Test
 
