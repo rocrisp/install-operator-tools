@@ -117,8 +117,8 @@ do
                    continue
         fi
         
-        echo "Run ./status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE"
-        operator_status=$(./status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE)
+        echo "Run bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE"
+        operator_status=$(bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE)
 
         ### if yes or no is found
         if [[ $operator_status == "Found" && $INSTALL_RETRY == "NO" ]]; then
@@ -210,28 +210,28 @@ do
                 echo "Failed to install operator:$counter $OO_PACKAGE" >> failed_operator.txt
                 echo "$output" >> failed_operator.txt
                 echo $'------------------\n' >> failed_operator.txt
-                echo "Run ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no"
-                ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no
+                echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no"
+                bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no
 
         elif [[ $output == *"ClusterServiceVersion \""*"\" ready"* ]]; then
                 echo "Success installed operator:$counter $OO_PACKAGE" >> success_operator.txt
 
                 #update source of truth
-                echo "Run ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes"
-                ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes
+                echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes"
+                bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes
                 
                 if  [[ $INSTALL_RUNOPERAND == "true" ]]; then
 
                         ###Did the operand Installed siccessfully ?
                         if [[ $output == *"Operand RC = 0"* ]]; then
                            echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
-                           echo "Run ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes"
-                           ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes
+                           echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes"
+                           bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes
                         else 
                            echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
                            echo "$err" >> failed_operand.txt
-                           echo "Run ./updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no"
-                           ./updatefile.sh $INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no
+                           echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no"
+                           bin/updatefile.sh $INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no
                         fi
                 fi
         else
