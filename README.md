@@ -1,6 +1,8 @@
 #Prereqquisite 
 k8s cluster available
 
+#edit vars.sh to add your operatorlist filename
+
 #Before begin the test, you need to generates manifests from appregistry namespace
 
 #For mac:
