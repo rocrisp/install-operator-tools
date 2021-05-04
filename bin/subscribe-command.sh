@@ -148,7 +148,7 @@ deployment_start_time: "${DEPLOYMENT_START_TIME}"
 EOF
             cp "${ARTIFACT_DIR}/${DEPLOYMENT_ART}" "${SHARED_DIR}/${DEPLOYMENT_ART}"
 
-            if  [[ $RUNOPERAND == "true" ]]; then
+            if  [[ $INSTALL_OPERAND == "yes" ]]; then
                 #install Operand
                 set +e
                 echo "Install Operand"

@@ -219,7 +219,7 @@ do
                 echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes"
                 bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes
                 
-                if  [[ $INSTALL_RUNOPERAND == "true" ]]; then
+                if  [[ $INSTALL_OPERAND == "yes" ]]; then
 
                         ###Did the operand Installed siccessfully ?
                         if [[ $output == *"Operand RC = 0"* ]]; then
