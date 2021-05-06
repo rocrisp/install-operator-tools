@@ -1,6 +1,6 @@
 
 #export vars
-source vars.sh
+source ./vars.sh
 
 #OS dependent tools
 unameOut="$(uname -s)"
@@ -37,7 +37,7 @@ counter=1
 #create file if it doesn't exist
 if [[ ! -e operatorlist/$SOURCEOFTRUTH ]]; then
     mkdir -p operatorlist
-    touch operatorlist/$SOURCEOFTRUTH
+    echo "Source-of-truth" > operatorlist/$SOURCEOFTRUTH
 fi
 
 
@@ -45,9 +45,9 @@ echo print vars
 env | grep OO_
 env | grep INSTALL
 
-echo "Run find $PWD/$INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n"
+echo "Run find $INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n"
 
-for file in $(find $PWD/$INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n); 
+for file in $(find $INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n); 
 #for file in $(cat test-inputfile.txt);
 do 
         dt=$(date '+%d/%m/%Y %H:%M:%S');

@@ -1,0 +1,56 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: install-job
+spec:
+  parallelism: 1    
+  completions: 1    
+  template:         
+    metadata:
+      name: install-job
+    spec:
+      volumes:
+      - name: install-scripts-volume
+        configMap:
+          name: install-scripts
+      containers:
+      - name: install-job
+        image: quay.io/rocrisp/install-operators:v1.0
+        volumeMounts:
+          - mountPath: /install-scripts
+            name: install-scripts-volume
+        env:
+          - name: HOME
+            value: /tmp
+        command:
+        - /bin/sh
+        - -c
+        - |
+          echo "scripts in /install-scripts"
+          ls -lh /install-scripts
+          echo "copy scripts to /tmp"
+          cp /install-scripts/*.sh /tmp
+          echo "apply 'chmod +x' to /tmp/*.sh"
+          chmod +x /tmp/*.sh
+          echo "execute install.sh now"
+          /tmp/install.sh
+      restartPolicy: Never
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    install.sh: |
+      echo "install.sh"
+      date
+      sleep 1
+      pwd
+      ls -ltr
+      whoami
+      bin/run.sh
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: null
+    name:  install-scripts
+kind: List
+metadata: {}

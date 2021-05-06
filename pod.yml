@@ -7,6 +7,5 @@ metadata:
 spec:
   containers:
   - name: demo-container
-    image: quay.io/rocrisp/install-operators:v0.1
-    command: ["bin/run.sh"]
+    image: quay.io/rocrisp/install-operators:v1.0
   restartPolicy: OnFailure
