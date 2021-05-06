@@ -48,7 +48,6 @@ env | grep INSTALL
 echo "Run find $INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n"
 
 for file in $(find $INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n); 
-#for file in $(cat test-inputfile.txt);
 do 
         dt=$(date '+%d/%m/%Y %H:%M:%S');
         
