@@ -25,12 +25,12 @@ else echo "Unknown OS, exiting..."
 fi
 
 #make sure tools exist
-if [ ! $(which $INSTALL_YQ 2>/dev/null) ]; then
+if [ ! $(bin/which $INSTALL_YQ 2>/dev/null) ]; then
 	echo -e "ERROR: yq not found. Exiting..."
 	exit 2
 fi
 
-if [ ! $(which $INSTALL_JQ 2>/dev/null) ]; then
+if [ ! $(bin/which $INSTALL_JQ 2>/dev/null) ]; then
 	echo -e "ERROR: jq not found. Exiting..."
 	exit 4
 fi
@@ -50,9 +50,9 @@ echo print vars
 env | grep OO_
 env | grep INSTALL
 
-echo "Run find $PWD/$1 -name '*package.yaml' | sort -n"
+echo "Run find $PWD/$INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n"
 
-for file in $(find $PWD/$1 -name '*package.yaml' | sort -n); 
+for file in $(bin/find $PWD/$INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n); 
 #for file in $(cat test-inputfile.txt);
 do 
         dt=$(date '+%d/%m/%Y %H:%M:%S');
@@ -152,12 +152,12 @@ do
         echo "currentCSV for defaultChannel $defaultChannel : $currentCSV"
         csvdir=$(echo $currentCSV | cut -d'.' -f2- | sed 's/v//');
 
-        csvfile=$(find $csvpath/$csvdir -name '*.clusterserviceversion.yaml');
+        csvfile=$(bin/find $csvpath/$csvdir -name '*.clusterserviceversion.yaml');
         
         #do this if csvfile is on the same path as the package.yaml
         if [[ -z "$csvfile" ]]; then
            echo "file not found in $csvdir"
-           csvfile=$(find $csvpath -name "$currentCSV.clusterserviceversion.yaml");
+           csvfile=$(bin/find $csvpath -name "$currentCSV.clusterserviceversion.yaml");
         fi
 
         echo "clusterserviceversion.yml : $csvfile"
