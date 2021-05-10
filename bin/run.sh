@@ -1,6 +1,7 @@
 
 #export vars
-source ./vars.sh
+cat /opt/operator/vars.sh
+source /opt/operator/vars.sh
 
 #OS dependent tools
 unameOut="$(uname -s)"
@@ -12,8 +13,8 @@ if [[ $unameOut == "Darwin" ]]; then
 
 elif [[ $unameOut == "Linux" ]]; then
    echo "OS=Linux"
-   export INSTALL_JQ="linux/jq"
-   export INSTALL_YQ="linux/yq"
+   export INSTALL_JQ="bin/jq"
+   export INSTALL_YQ="bin/yq"
 
 else echo "Unknown OS, exiting..."
    exit
