@@ -28,7 +28,7 @@ do
    csvpath="$(dirname "${file}")"
 
    # yq eval .packageName /Users/rosecrisp/test/manifests-616344862//tf-operator/tf-operator-9gd6l17v/package.yaml
-   export OO_PACKAGE=$($INSTALL_YQ eval '.packageName' $file);
+   export OO_PACKAGE=$(yq eval '.packageName' $file);
    echo ""
    echo "--------------$counter----------------------"
    echo "Installing Operator $OO_PACKAGE"
@@ -106,14 +106,14 @@ do
       continue
    fi
 
-   defaultChannel=$($INSTALL_YQ eval '.defaultChannel' $file)
+   defaultChannel=$(yq eval '.defaultChannel' $file)
    export OO_CHANNEL=$defaultChannel;
 
    currentCSV=$(cat $file | grep -A1 "name: ${defaultChannel}" | grep currentCSV | awk '{ print $2 }');
    
    ##do this if the format is different
    if [[ -z "$currentCSV" ]]; then
-      currentCSV=$($INSTALL_YQ eval '.channels[].currentCSV' $file)
+      currentCSV=$(yq eval '.channels[].currentCSV' $file)
    fi
 
    echo "currentCSV for defaultChannel $defaultChannel : $currentCSV"
@@ -129,7 +129,7 @@ do
 
    echo "clusterserviceversion.yml : $csvfile"
    
-   export AllNamespaces=$($INSTALL_YQ eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
+   export AllNamespaces=$(yq eval '.spec.installModes[] | select(.type == "AllNamespaces") | .supported' $csvfile)
    echo "installModes.AllNamespaces = $AllNamespaces"
    
    #Setup cr file
@@ -146,7 +146,7 @@ do
 
    ##find metadata.namespace per
    echo "cr_yaml is $INSTALL_CR_YML"
-   cr_namespace=$($INSTALL_YQ eval '.metadata.namespace' $INSTALL_CR_YML)
+   cr_namespace=$(yq eval '.metadata.namespace' $INSTALL_CR_YML)
    echo "metadata.namespace = $cr_namespace"
    if [[ $cr_namespace == *"null"* ]]; then
       echo "namespace is NOT in cr, so set OO_INSTALL_NAMESPACE to !create otherwise set it to the namespace"
