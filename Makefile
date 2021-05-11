@@ -1,6 +1,6 @@
 IMAGE_BUILDER=podman
-IMAGE_NAME=operator-install-audit
-IMAGE_REPO=quay.io/john_mckenzie
+IMAGE_NAME=install-operators
+IMAGE_REPO=quay.io/rocrisp
 IMAGE_VERSION=latest
 KUBE_CONFIG=~/.kube/config
 TEMP_DIR=`pwd`/tmp
