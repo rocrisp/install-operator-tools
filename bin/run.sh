@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#export vars
+cat /opt/operator/vars.sh
 source /opt/operator/vars.sh
 
 # generate manifests from appregistry namespace

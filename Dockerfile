@@ -1,5 +1,13 @@
 # ubi-minimal created: 2021-04-14T21:03:00.758405Z
 FROM registry.access.redhat.com/ubi8/ubi-minimal@sha256:2f6b88c037c0503da7704bccd3fc73cb76324101af39ad28f16460e7bce98324
+
+LABEL name="InstallOperator" \
+      vendor="Redhat" \
+      maintainer="Rose Crisp" \
+      version="1.0" \
+      summary="Installs operator on a cluster" \
+      description="Automate installing of operators on a cluster"
+
 WORKDIR /var/operator
 
 COPY bin /opt/operator/bin/ 
