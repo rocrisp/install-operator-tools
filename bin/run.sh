@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./vars.sh
+source /opt/operator/vars.sh
 
 # generate manifests from appregistry namespace
 offline-cataloger generate-manifests "certified-operators"
@@ -84,8 +84,8 @@ do
       continue
    fi
    
-   echo "Run bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE"
-   operator_status=$(bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE)
+   echo "Run status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE"
+   operator_status=$(/opt/operator/bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE)
 
    ### if yes or no is found
    if [[ $operator_status == "Found" && $INSTALL_RETRY == "NO" ]]; then
@@ -134,7 +134,7 @@ do
    
    #Setup cr file
    echo "Run dump-crs-from-csv.sh"
-   bin/dump-crs-from-csv.sh $csvfile 1
+   /opt/operator/bin/dump-crs-from-csv.sh $csvfile 1
    
 
    if [[ $AllNamespaces == "false" ]]; then
@@ -159,10 +159,10 @@ do
    echo print vars
    env | grep OO_
    
-   echo "Run bin/subscribe-command.sh"
+   echo "Run subscribe-command.sh"
    
    error_file="errorfile.txt"
-   output=$(bin/subscribe-command.sh 2>$error_file)
+   output=$(/opt/operator/bin/subscribe-command.sh 2>$error_file)
    err=$(< $error_file)
    rm $error_file
 
@@ -175,27 +175,27 @@ do
       echo "Failed to install operator:$counter $OO_PACKAGE" >> failed_operator.txt
       echo "$output" >> failed_operator.txt
       echo $'------------------\n' >> failed_operator.txt
-      echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no"
-      bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no
+      echo "Run updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no"
+      /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no
 
    elif [[ $output == *"ClusterServiceVersion \""*"\" ready"* ]]; then
       echo "Success installed operator:$counter $OO_PACKAGE" >> success_operator.txt
 
       #update source of truth
-      echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes"
-      bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes
+      echo "Run updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes"
+      /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes
       
       if  [[ $INSTALL_OPERAND == "yes" ]]; then
          ###Did the operand Installed siccessfully ?
          if [[ $output == *"Operand RC = 0"* ]]; then
             echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
-            echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes"
-            bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes
+            echo "Run updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes"
+            /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes yes
          else 
             echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
             echo "$err" >> failed_operand.txt
-            echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no"
-            bin/updatefile.sh $INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no
+            echo "Run updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no"
+            /opt/operator/bin/updatefile.sh $INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes no
          fi
       fi
    else
