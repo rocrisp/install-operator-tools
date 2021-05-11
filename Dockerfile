@@ -1,6 +1,6 @@
 # ubi-minimal created: 2021-04-14T21:03:00.758405Z
 FROM registry.access.redhat.com/ubi8/ubi-minimal@sha256:2f6b88c037c0503da7704bccd3fc73cb76324101af39ad28f16460e7bce98324
-WORKDIR /opt/operator
+WORKDIR /var/operator
 
 COPY bin /opt/operator/bin/ 
 COPY vars.sh /opt/operator/
@@ -12,6 +12,6 @@ RUN curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download
 RUN curl -L https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux-4.7.9.tar.gz | tar -xzv -C /usr/local/bin --exclude README.md
 
 RUN chmod 755 /usr/local/bin/*
-RUN chmod 775 /opt/operator
+RUN chmod 775 /var/operator
 
 CMD ["/opt/operator/bin/run.sh"]
