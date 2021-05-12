@@ -25,6 +25,7 @@ echo "Run find $INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n"
 
 for file in $(find $INSTALL_MANIFEST_DIRECTORY -name '*package.yaml' | sort -n); 
 do 
+
    dt=$(date '+%d/%m/%Y %H:%M:%S');
    
    csvpath="$(dirname "${file}")"
@@ -210,4 +211,5 @@ do
    echo "--------------------------------------"
    echo "Finish Installing Operator $OO_PACKAGE"
    echo $'--------------------------------------\n'
+
 done
