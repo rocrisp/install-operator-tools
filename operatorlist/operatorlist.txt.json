@@ -144,6 +144,18 @@
     ]
   },
   {
+    "id": "13",
+    "name": "armo-operator-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "14",
     "name": "armory-operator",
     "starttime": "starttime",
@@ -288,6 +300,18 @@
     ]
   },
   {
+    "id": "26",
+    "name": "cilium",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "27",
     "name": "citrix-adc-istio-ingress-gateway-operator",
     "starttime": "starttime",
@@ -360,6 +384,18 @@
     ]
   },
   {
+    "id": "33",
+    "name": "cockroachdb-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "34",
     "name": "coralogix-operator-certified",
     "starttime": "starttime",
@@ -416,6 +452,18 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "name": "cortex-operator",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -480,6 +528,18 @@
     ]
   },
   {
+    "id": "45",
+    "name": "data-explorer-operator-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "46",
     "name": "datadog-operator-certified",
     "starttime": "starttime",
@@ -528,6 +588,18 @@
     ]
   },
   {
+    "id": "50",
+    "name": "driverlessai-deployment-operator-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "51",
     "name": "dynatrace-operator",
     "starttime": "starttime",
@@ -560,6 +632,30 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "54",
+    "name": "epsagon-operator-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "name": "erynis-operator",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -632,6 +728,18 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "name": "gitlab-operator",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -756,6 +864,18 @@
     ]
   },
   {
+    "id": "73",
+    "name": "ibm-auditlogging-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "74",
     "name": "ibm-block-csi-operator",
     "starttime": "starttime",
@@ -764,6 +884,78 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "75",
+    "name": "ibm-helm-api-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "76",
+    "name": "ibm-helm-repo-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "77",
+    "name": "ibm-management-ingress-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "78",
+    "name": "ibm-mongodb-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "79",
+    "name": "ibm-monitoring-grafana-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "80",
+    "name": "ibm-platform-api-operator-app",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -1056,6 +1248,18 @@
     ]
   },
   {
+    "id": "105",
+    "name": "newrelic-infrastructure",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "106",
     "name": "nginx-ingress-operator",
     "starttime": "starttime",
@@ -1140,6 +1344,18 @@
     ]
   },
   {
+    "id": "113",
+    "name": "ocean-operator",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "114",
     "name": "oneagent-certified",
     "starttime": "starttime",
@@ -1148,6 +1364,18 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "115",
+    "name": "open-enterprise-spinnaker",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -1260,6 +1488,18 @@
     ]
   },
   {
+    "id": "125",
+    "name": "planetscale-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "126",
     "name": "portshift-controller-operator",
     "starttime": "starttime",
@@ -1296,6 +1536,30 @@
     ]
   },
   {
+    "id": "129",
+    "name": "presto-operator",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "name": "prisma-cloud-compute-console-operator.v2.0.1",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "131",
     "name": "rapidbiz-operator-certified",
     "starttime": "starttime",
@@ -1328,6 +1592,30 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "name": "robin-storage-express",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "135",
+    "name": "robin-storage-trial",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -1500,6 +1788,18 @@
     ]
   },
   {
+    "id": "150",
+    "name": "tidb-operator-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "151",
     "name": "tigera-operator",
     "starttime": "starttime",
@@ -1524,6 +1824,18 @@
     ]
   },
   {
+    "id": "153",
+    "name": "traefikee-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
     "id": "154",
     "name": "traefikee-redhat-certified",
     "starttime": "starttime",
@@ -1532,6 +1844,18 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "155",
+    "name": "trains-operator-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
@@ -1556,6 +1880,30 @@
     "operand": [
       {
         "install": "true"
+      }
+    ]
+  },
+  {
+    "id": "158",
+    "name": "twistlock-certified",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
+      }
+    ]
+  },
+  {
+    "id": "159",
+    "name": "ubix-operator",
+    "starttime": "starttime",
+    "endttime": "endtime",
+    "install": "false",
+    "operand": [
+      {
+        "install": ""
       }
     ]
   },
