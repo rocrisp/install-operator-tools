@@ -1,10 +1,10 @@
-{
-    id: $t1 ,  
-    name: $t2 ,
-    starttime: $t3 ,
-    endttime: $t4 ,
-    install: $t5 ,
-    operand: [
-        { install: $t6}
-    ]
-}
+    {
+        id: $t1 ,  
+        name: $t2 ,
+        starttime: $t3 ,
+        endttime: $t4 ,
+        install: $t5 ,
+        operand: [
+            { install: $t6 }
+        ]
+    }
