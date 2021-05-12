@@ -36,5 +36,4 @@
     RUN export manifest_directory=$(bin/find . -maxdepth 1 -name manifest*);chmod 777 $manifest_directory;echo -e "\nexport INSTALL_MANIFEST_DIRECTORY=$manifest_directory" >> vars.sh
     RUN chmod 777 vars.sh
     RUN chmod 777 bin/run.sh
-    USER 1001
     ENTRYPOINT ["/bin/bash"]

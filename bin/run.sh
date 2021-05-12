@@ -212,7 +212,11 @@ do
 
                 #update source of truth
                 echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes"
-                bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE yes
+                bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH.txt $OO_PACKAGE yes
+
+                ###update jsonfile
+                echo "Run bin/updatejson.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE three four"
+                bin/updatejson.sh operatorlist/$INSTALL_SOURCEOFTRUTH.json $OO_PACKAGE three four
                 
                 if  [[ $INSTALL_OPERAND == "yes" ]]; then
 
@@ -238,6 +242,7 @@ do
         echo "--------------------------------------"
         echo "Finish Installing Operator $OO_PACKAGE"
         echo $'--------------------------------------\n'
+        exit
 
 done
 

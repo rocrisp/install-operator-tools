@@ -1,0 +1,1692 @@
+{
+  "id": "1",
+  "name": "aci-containers-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "2",
+  "name": "akka-cluster-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "3",
+  "name": "alcide-kaudit-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "4",
+  "name": "anaconda-team-edition",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "5",
+  "name": "anchore-engine",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "6",
+  "name": "anzo-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "7",
+  "name": "anzograph-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "8",
+  "name": "anzounstructured-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "9",
+  "name": "appdynamics-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "10",
+  "name": "appranix-cps",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "11",
+  "name": "appsody-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "12",
+  "name": "aqua-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "14",
+  "name": "armory-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "15",
+  "name": "as400rpc-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "16",
+  "name": "atomicorp-helm-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "17",
+  "name": "aws-event-sources-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "18",
+  "name": "bacula-operator2",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "19",
+  "name": "behavior-analytics-services-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "20",
+  "name": "blackduck-connector-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "21",
+  "name": "can-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "22",
+  "name": "cass-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "23",
+  "name": "cert-manager-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "24",
+  "name": "cic-operator-with-crds",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "25",
+  "name": "cic-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "27",
+  "name": "citrix-adc-istio-ingress-gateway-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "28",
+  "name": "citrix-cpx-istio-sidecar-injector-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "29",
+  "name": "citrix-cpx-with-ingress-controller-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "30",
+  "name": "citrix-ingress-controller-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "31",
+  "name": "cloud-native-postgresql",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "32",
+  "name": "cnvrg-operator-marketplace",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "34",
+  "name": "coralogix-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "35",
+  "name": "cortex-certifai-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "36",
+  "name": "cortex-fabric-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "37",
+  "name": "cortex-healthcare-hub-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "38",
+  "name": "cortex-hub-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "40",
+  "name": "couchbase-enterprise-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "false"
+    }
+  ]
+}
+{
+  "id": "41",
+  "name": "couchdb-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "42",
+  "name": "cpx-cic-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "43",
+  "name": "crunchy-postgres-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "44",
+  "name": "cyberarmor-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "46",
+  "name": "datadog-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "47",
+  "name": "dataset-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "48",
+  "name": "dell-csi-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "49",
+  "name": "densify-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "51",
+  "name": "dynatrace-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "52",
+  "name": "eddi-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "53",
+  "name": "elasticsearch-eck-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "56",
+  "name": "f5-bigip-ctlr-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "57",
+  "name": "falco-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "58",
+  "name": "federatorai-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "59",
+  "name": "fep-ansible-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "60",
+  "name": "fep-helm-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "61",
+  "name": "fp-predict-plus-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "63",
+  "name": "gitlab-runner-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "64",
+  "name": "gpu-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "65",
+  "name": "growth-stack-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "66",
+  "name": "h2o-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "67",
+  "name": "hazelcast-enterprise-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "68",
+  "name": "hazelcast-jet-enterprise-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "69",
+  "name": "here-service-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "70",
+  "name": "hpe-csi-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "71",
+  "name": "hpe-ezmeral-csi-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "72",
+  "name": "hspc-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "74",
+  "name": "ibm-block-csi-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "81",
+  "name": "ibm-spectrum-scale-csi",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "82",
+  "name": "ibm-spectrum-symphony-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "83",
+  "name": "infinibox-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "84",
+  "name": "insightedge-enterprise-operator2",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "85",
+  "name": "instana-agent",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "86",
+  "name": "ivory-server-app",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "87",
+  "name": "joget-dx-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "88",
+  "name": "joget-openshift-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "89",
+  "name": "jtrac-app-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "90",
+  "name": "k10-kasten-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "91",
+  "name": "k8s-triliovault",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "92",
+  "name": "kong-offline-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "93",
+  "name": "kong",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "94",
+  "name": "kpow-io-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "95",
+  "name": "kube-arangodb",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "96",
+  "name": "kubemq-operator-marketplace",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "97",
+  "name": "kubemq-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "98",
+  "name": "kubeturbo-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "99",
+  "name": "linstor-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "100",
+  "name": "memql-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "101",
+  "name": "mongodb-enterprise",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "102",
+  "name": "nastel-navigator-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "103",
+  "name": "nastel-xray-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "104",
+  "name": "neuvector-certified-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "106",
+  "name": "nginx-ingress-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "107",
+  "name": "node-red-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "108",
+  "name": "nsx-container-plugin-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "109",
+  "name": "nuodb-ce-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "110",
+  "name": "nvmesh-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "111",
+  "name": "nxiq-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "112",
+  "name": "nxrm-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "114",
+  "name": "oneagent-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "116",
+  "name": "open-liberty-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "117",
+  "name": "openshiftartifactoryha-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "118",
+  "name": "openshiftpipeline-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "119",
+  "name": "openshiftxray-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "120",
+  "name": "openunison-ocp-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "121",
+  "name": "orca",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "122",
+  "name": "perceptilabs-operator-package",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "123",
+  "name": "percona-server-mongodb-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "124",
+  "name": "percona-xtradb-cluster-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "126",
+  "name": "portshift-controller-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "127",
+  "name": "portshift-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "false"
+    }
+  ]
+}
+{
+  "id": "128",
+  "name": "portworx-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "131",
+  "name": "rapidbiz-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "132",
+  "name": "redhat-marketplace-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "133",
+  "name": "redis-enterprise-operator-cert",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "136",
+  "name": "rocketchat-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "137",
+  "name": "runtime-component-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "138",
+  "name": "seldon-deploy-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "139",
+  "name": "seldon-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "140",
+  "name": "sematext",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "141",
+  "name": "snyk-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "142",
+  "name": "splunk-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "143",
+  "name": "stonebranch-universalagent-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "144",
+  "name": "storageos2",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "145",
+  "name": "storageos",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "146",
+  "name": "synopsys-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "147",
+  "name": "sysdig-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "148",
+  "name": "t8c-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "149",
+  "name": "tf-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "151",
+  "name": "tigera-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "152",
+  "name": "timemachine-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "154",
+  "name": "traefikee-redhat-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "156",
+  "name": "transform-adv-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "157",
+  "name": "triggermesh-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "160",
+  "name": "uma-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "161",
+  "name": "universalagent-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "162",
+  "name": "vfunction-server-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "163",
+  "name": "vprotect-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "164",
+  "name": "wavefront-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "165",
+  "name": "xcrypt-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "166",
+  "name": "xspc-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "167",
+  "name": "yugabyte-operator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "168",
+  "name": "yugabyte-platform-operator-bundle",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "169",
+  "name": "zabbix-operator-certified",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
+{
+  "id": "170",
+  "name": "zoperator",
+  "starttime": "starttime",
+  "endttime": "endtime",
+  "install": "true",
+  "operand": [
+    {
+      "install": "true"
+    }
+  ]
+}
