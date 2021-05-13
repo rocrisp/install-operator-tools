@@ -204,7 +204,7 @@ do
                 echo "Failed to install operator:$counter $OO_PACKAGE" >> failed_operator.txt
                 echo "$output" >> failed_operator.txt
                 echo $'------------------\n' >> failed_operator.txt
-                echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no"
+                echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no no"
                 bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE no
 
         elif [[ $output == *"ClusterServiceVersion \""*"\" ready"* ]]; then

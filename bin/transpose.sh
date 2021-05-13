@@ -26,12 +26,12 @@ while IFS= read -r line; do
 #     ]
 #     }
 
-   jq -n --arg t1 $counter \
+   jq -n --argjson t1 $counter \
         --arg t2 $operator_name \
         --arg t3 "starttime" \
         --arg t4 "endtime" \
-        --arg t5 "$operator_status" \
-        --arg t6 "$operand_status" \
+        --argjson t5 $operator_status \
+        --argjson t6 $operand_status \
         -f template.json >> $inputfile.temp.json
 
 ((counter++))
