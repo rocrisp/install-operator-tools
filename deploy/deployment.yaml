@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: installoperators
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: installoperators
+  template:
+    metadata:
+      labels:
+        app: installoperators
+    spec:
+      containers:
+      - name: installoperators
+        image: quay.io/rocrisp/install-operators:v0.7
+        command: ["bin/run.sh"]

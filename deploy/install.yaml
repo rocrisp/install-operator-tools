@@ -1,0 +1,40 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: operator-audit
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: operator-audit
+subjects:
+- kind: ServiceAccount
+  name: operator-audit
+  namespace: operator-audit
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: ""
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: operator-audit
+  namespace: operator-audit
+spec:
+  template:
+    metadata:
+      name: operator-audit
+    spec:
+      containers:
+        - name: operator-audit
+          image: quay.io/john_mckenzie/operator-install-audit:latest
+          imagePullPolicy: Always
+      restartPolicy: Never
+      serviceAccountName: operator-audit
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: operator-audit
+  namespace: operator-audit
