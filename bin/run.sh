@@ -18,6 +18,17 @@ if [[ ! -e operatorlist/$INSTALL_SOURCEOFTRUTH ]]; then
     echo "Source-of-truth" > operatorlist/$INSTALL_SOURCEOFTRUTH
 fi
 
+#create dir
+if [[ ! -e artifact_dir ]]; then
+   mkdir -p artifact_dir
+   echo "artifact_dir created"
+fi
+
+if [[ ! -e shared_dir ]]; then
+   mkdir -p shared_dir
+   echo "shared_dir created"
+fi
+
 #count the number for installs
 counter=1
 
@@ -82,8 +93,8 @@ do
                 [[ $file == *"presto-operator"* ]];
                 then
                    echo "Skip $OO_PACKAGE with operator had problems installing on a cluster."
-                   echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime}"
-                   bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE 0 false false 0 "Skip. Unable to install via automation/manual"
+                   echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime}"
+                   /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE 0 false false 0 "Skip. Unable to install via automation/manual"
                    ((counter++))
                    continue
 
@@ -96,15 +107,15 @@ do
                 [[ $file == *"crunchy-postgres-operator"* ]];                 
                 then
                    echo "Skip $OO_PACKAGE with operator had problems installing on a cluster."
-                   echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime}"
-                   bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE 0 true true 0 "Skip. Unable to install via automation. Installed Manually"
+                   echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime}"
+                   /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE 0 true true 0 "Skip. Unable to install via automation. Installed Manually"
                    
                    ((counter++))
                    continue
         fi
         
-        echo "Run bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE"
-        operator_status=$(bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE)
+        echo "Run /opt/operator/bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE"
+        operator_status=$(/opt/operator/bin/status.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE)
 
         ### if yes or no is found
         if [[ $operator_status == "Found" && $INSTALL_RETRY == "NO" ]]; then
@@ -152,8 +163,8 @@ do
         echo "installModes.AllNamespaces = $AllNamespaces"
         
         #Setup cr file
-        echo "Run dump-crs-from-csv.sh $csvfile 1"
-        bin/dump-crs-from-csv.sh $csvfile 1
+        echo "Run /opt/operator/bin/dump-crs-from-csv.sh $csvfile 1"
+        /opt/operator/bin/dump-crs-from-csv.sh $csvfile 1
 
         if [[ $AllNamespaces == "false" ]]; then
                 #set OO_TARGET_NAMESPACES
@@ -178,16 +189,16 @@ do
         echo print vars
         env | grep OO_
         
-        echo "Run bin/subscribe-command.sh"
+        echo "Run /opt/operator/bin/subscribe-command.sh"
         
         error_file="errorfile.txt"
         
         #track start time
         operator_starttime=$(date -u '+%Y-%m-%dT-%H-%M-%SZ')
-        echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime}"
-        bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime} "status" "status" "endtime" ""
+        echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime}"
+        /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE ${operator_starttime} "status" "status" "endtime" ""
 
-        output=$(bin/subscribe-command.sh 2>$error_file)
+        output=$(/opt/operator/bin/subscribe-command.sh 2>$error_file)
         err=$(< $error_file)
         rm $error_file
 
@@ -203,29 +214,29 @@ do
                 echo "Failed to install operator:$counter $OO_PACKAGE" >> failed_operator.txt
                 echo "$output" >> failed_operator.txt
                 echo $'------------------\n' >> failed_operator.txt
-                echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime false false $operator_endtime"
-                bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime false false $operator_endtime ""
+                echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime false false $operator_endtime"
+                /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime false false $operator_endtime ""
 
         elif [[ $output == *"ClusterServiceVersion \""*"\" ready"* ]]; then
                 
                 echo "Success installed operator:$counter $OO_PACKAGE" >> success_operator.txt
 
                 #update source of truth
-                echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true $operator_endtime"
-                bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true status $operator_endtime ""
+                echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true $operator_endtime"
+                /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true status $operator_endtime ""
                 
                 if  [[ $INSTALL_OPERAND == "yes" ]]; then
 
                         ###Did the operand Installed siccessfully ?
                         if [[ $output == *"Operand RC = 0"* ]]; then
                            echo "Successfully installed operand for $counter $OO_PACKAGE" >> success_operand.txt
-                           echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true true $operator_endtime"
-                           bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true true $operator_endtime ""
+                           echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true true $operator_endtime"
+                           /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true true $operator_endtime ""
                         else 
                            echo "Failed to install operand for $counter $OO_PACKAGE" >> failed_operand.txt
                            echo "$err" >> failed_operand.txt
-                           echo "Run bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true false $operator_endtime"
-                           bin/updatefile.sh $INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true false $operator_endtime ""
+                           echo "Run /opt/operator/bin/updatefile.sh operatorlist/$INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true false $operator_endtime"
+                           /opt/operator/bin/updatefile.sh $INSTALL_SOURCEOFTRUTH $OO_PACKAGE $operator_starttime true false $operator_endtime ""
                         fi
                 fi
         else

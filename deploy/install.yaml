@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: operator-audit
-          image: quay.io/john_mckenzie/operator-install-audit:latest
+          image: quay.io/rocrisp/install-operators:latest
           imagePullPolicy: Always
       restartPolicy: Never
       serviceAccountName: operator-audit
