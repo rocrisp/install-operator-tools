@@ -249,5 +249,7 @@ do
         echo "--------------------------------------"
         echo "Finish Installing Operator $OO_PACKAGE"
         echo $'--------------------------------------\n'
-
+        
+        #generate json report
+        /opt/operator/bin/transpose.sh $INSTALL_SOURCEOFTRUTH
 done

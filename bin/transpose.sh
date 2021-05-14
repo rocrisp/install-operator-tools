@@ -46,7 +46,7 @@ while IFS= read -r line; do
         --argjson t5 $operator_status \
         --argjson t6 $operand_status \
         --arg t7 "$operator_comment" \
-        -f bin/template.json >> $inputfile.temp.json
+        -f /opt/operator/bin/template.json >> $inputfile.temp.json
 ((counter++))
 done < $inputfile
 
