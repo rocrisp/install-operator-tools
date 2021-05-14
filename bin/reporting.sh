@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Source of Truth : $1"
 echo "manifest dir : $2"
 

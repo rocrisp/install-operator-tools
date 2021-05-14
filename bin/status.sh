@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #echo "Get Operator status"
 
 #echo "From source of truth $1"

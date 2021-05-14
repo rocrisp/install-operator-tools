@@ -1,4 +1,4 @@
-IMAGE_BUILDER=docker
+IMAGE_BUILDER=podman
 IMAGE_NAME=install-operators
 IMAGE_REPO=quay.io/rocrisp
 IMAGE_VERSION=latest
