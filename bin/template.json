@@ -4,6 +4,7 @@
         starttime: $t3 ,
         endttime: $t4 ,
         install: $t5 ,
+        comment: $t7 ,
         operand: [
             { install: $t6 }
         ]

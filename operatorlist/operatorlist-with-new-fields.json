@@ -1,0 +1,1796 @@
+[
+  {
+    "id": 1,
+    "name": "aci-containers-operator",
+    "starttime": "13-05-2021-16-29-53",
+    "endttime": "13-05-2021-16-31-00",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "akka-cluster-operator-certified",
+    "starttime": "13-05-2021-16-31-01",
+    "endttime": "13-05-2021-16-31-36",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "alcide-kaudit-operator",
+    "starttime": "13-05-2021-16-31-37",
+    "endttime": "13-05-2021-16-32-12",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "anaconda-team-edition",
+    "starttime": "13-05-2021-16-32-13",
+    "endttime": "13-05-2021-16-32-49",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "anchore-engine",
+    "starttime": "13-05-2021-16-32-50",
+    "endttime": "13-05-2021-16-33-40",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "anzo-operator",
+    "starttime": "13-05-2021-16-33-41",
+    "endttime": "13-05-2021-16-34-34",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "anzograph-operator",
+    "starttime": "13-05-2021-16-34-35",
+    "endttime": "13-05-2021-16-35-26",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "anzounstructured-operator",
+    "starttime": "13-05-2021-16-35-27",
+    "endttime": "13-05-2021-16-37-05",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "appdynamics-operator",
+    "starttime": "13-05-2021-16-37-06",
+    "endttime": "13-05-2021-16-38-00",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "appranix-cps",
+    "starttime": "13-05-2021-16-38-01",
+    "endttime": "13-05-2021-16-39-10",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "appsody-operator-certified",
+    "starttime": "13-05-2021-16-39-11",
+    "endttime": "13-05-2021-16-40-24",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "aqua-operator-certified",
+    "starttime": "13-05-2021-16-40-26",
+    "endttime": "13-05-2021-16-41-50",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "armory-operator",
+    "starttime": "13-05-2021-16-41-51",
+    "endttime": "13-05-2021-16-43-31",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "as400rpc-operator",
+    "starttime": "13-05-2021-16-43-32",
+    "endttime": "13-05-2021-16-44-39",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "atomicorp-helm-operator-certified",
+    "starttime": "13-05-2021-16-44-40",
+    "endttime": "13-05-2021-16-45-33",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "aws-event-sources-operator-certified",
+    "starttime": "13-05-2021-16-45-34",
+    "endttime": "13-05-2021-16-46-26",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "bacula-operator2",
+    "starttime": "13-05-2021-16-46-27",
+    "endttime": "13-05-2021-16-47-50",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "behavior-analytics-services-operator-certified",
+    "starttime": "13-05-2021-16-47-51",
+    "endttime": "13-05-2021-16-49-17",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "blackduck-connector-operator",
+    "starttime": "13-05-2021-16-49-18",
+    "endttime": "13-05-2021-16-52-24",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "can-operator",
+    "starttime": "13-05-2021-16-52-25",
+    "endttime": "13-05-2021-16-53-16",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "cass-operator",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "cert-manager-operator",
+    "starttime": "13-05-2021-16-53-17",
+    "endttime": "13-05-2021-16-54-39",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "cic-operator",
+    "starttime": "13-05-2021-16-56-04",
+    "endttime": "13-05-2021-16-57-24",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "citrix-adc-istio-ingress-gateway-operator",
+    "starttime": "13-05-2021-16-57-26",
+    "endttime": "13-05-2021-16-58-47",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "citrix-cpx-istio-sidecar-injector-operator",
+    "starttime": "13-05-2021-16-58-48",
+    "endttime": "13-05-2021-16-59-24",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "citrix-cpx-with-ingress-controller-operator",
+    "starttime": "13-05-2021-16-59-25",
+    "endttime": "13-05-2021-17-00-26",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "citrix-ingress-controller-operator",
+    "starttime": "13-05-2021-17-00-27",
+    "endttime": "13-05-2021-17-02-37",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "cloud-native-postgresql",
+    "starttime": "13-05-2021-17-02-38",
+    "endttime": "13-05-2021-17-04-50",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "cnvrg-operator-marketplace",
+    "starttime": "13-05-2021-17-04-52",
+    "endttime": "13-05-2021-17-05-44",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "cockroachdb-certified",
+    "starttime": "0",
+    "endttime": "0",
+    "install": false,
+    "comment": "Skip. Unable to install via automation/manual",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "coralogix-operator-certified",
+    "starttime": "13-05-2021-17-05-46",
+    "endttime": "13-05-2021-17-06-53",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "cortex-certifai-operator",
+    "starttime": "13-05-2021-17-06-54",
+    "endttime": "13-05-2021-17-07-44",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "cortex-healthcare-hub-operator",
+    "starttime": "13-05-2021-17-07-47",
+    "endttime": "13-05-2021-17-08-38",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "cortex-hub-operator",
+    "starttime": "13-05-2021-17-08-39",
+    "endttime": "13-05-2021-17-09-30",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "couchdb-operator-certified",
+    "starttime": "13-05-2021-17-10-29",
+    "endttime": "13-05-2021-17-11-52",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "cpx-cic-operator",
+    "starttime": "13-05-2021-17-11-53",
+    "endttime": "13-05-2021-17-12-45",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "crunchy-postgres-operator",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "cyberarmor-operator-certified",
+    "starttime": "13-05-2021-17-12-47",
+    "endttime": "13-05-2021-17-13-37",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "data-explorer-operator-certified",
+    "starttime": "0",
+    "endttime": "0",
+    "install": false,
+    "comment": "Skip. Unable to install via automation/manual",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "datadog-operator-certified",
+    "starttime": "13-05-2021-17-13-38",
+    "endttime": "13-05-2021-17-14-30",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "dataset-operator",
+    "starttime": "13-05-2021-17-14-31",
+    "endttime": "13-05-2021-17-15-39",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "dell-csi-operator-certified",
+    "starttime": "13-05-2021-17-15-40",
+    "endttime": "13-05-2021-17-16-48",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "densify-operator",
+    "starttime": "13-05-2021-17-16-49",
+    "endttime": "13-05-2021-17-17-45",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "dynatrace-operator",
+    "starttime": "13-05-2021-17-17-46",
+    "endttime": "13-05-2021-17-19-09",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "eddi-operator-certified",
+    "starttime": "13-05-2021-17-19-10",
+    "endttime": "13-05-2021-17-20-03",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "elasticsearch-eck-operator-certified",
+    "starttime": "13-05-2021-17-20-04",
+    "endttime": "13-05-2021-17-20-59",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "f5-bigip-ctlr-operator",
+    "starttime": "13-05-2021-17-21-00",
+    "endttime": "13-05-2021-17-21-52",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "falco-certified",
+    "starttime": "13-05-2021-17-21-53",
+    "endttime": "13-05-2021-17-22-43",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "fep-ansible-operator",
+    "starttime": "13-05-2021-17-38-37",
+    "endttime": "13-05-2021-17-39-44",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "fp-predict-plus-operator-certified",
+    "starttime": "13-05-2021-17-39-45",
+    "endttime": "13-05-2021-17-40-36",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "gitlab-runner-operator",
+    "starttime": "13-05-2021-17-40-37",
+    "endttime": "13-05-2021-17-41-47",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "gpu-operator-certified",
+    "starttime": "13-05-2021-17-41-48",
+    "endttime": "13-05-2021-17-43-11",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "growth-stack-operator-certified",
+    "starttime": "13-05-2021-17-43-12",
+    "endttime": "13-05-2021-17-44-18",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "h2o-operator",
+    "starttime": "13-05-2021-17-44-19",
+    "endttime": "13-05-2021-17-45-11",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "hazelcast-enterprise-certified",
+    "starttime": "13-05-2021-17-45-12",
+    "endttime": "13-05-2021-17-46-02",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "hazelcast-jet-enterprise-operator",
+    "starttime": "13-05-2021-17-46-03",
+    "endttime": "13-05-2021-17-47-25",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "here-service-operator-certified",
+    "starttime": "13-05-2021-17-47-26",
+    "endttime": "13-05-2021-17-48-33",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "hpe-csi-operator",
+    "starttime": "13-05-2021-17-48-34",
+    "endttime": "13-05-2021-17-49-42",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "hpe-ezmeral-csi-operator",
+    "starttime": "13-05-2021-17-49-43",
+    "endttime": "13-05-2021-17-51-27",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "hspc-operator",
+    "starttime": "13-05-2021-17-51-28",
+    "endttime": "13-05-2021-17-52-25",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "ibm-block-csi-operator",
+    "starttime": "13-05-2021-17-52-26",
+    "endttime": "13-05-2021-17-53-19",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "ibm-spectrum-scale-csi",
+    "starttime": "13-05-2021-17-53-21",
+    "endttime": "13-05-2021-17-54-28",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "ibm-spectrum-symphony-operator",
+    "starttime": "13-05-2021-17-54-29",
+    "endttime": "13-05-2021-17-55-21",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "infinibox-operator-certified",
+    "starttime": "13-05-2021-17-55-22",
+    "endttime": "13-05-2021-17-56-30",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "insightedge-enterprise-operator2",
+    "starttime": "13-05-2021-17-56-31",
+    "endttime": "13-05-2021-17-57-38",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "instana-agent",
+    "starttime": "13-05-2021-17-57-39",
+    "endttime": "13-05-2021-17-58-45",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "ivory-server-app",
+    "starttime": "13-05-2021-17-58-46",
+    "endttime": "13-05-2021-17-59-36",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "joget-dx-operator",
+    "starttime": "13-05-2021-17-59-37",
+    "endttime": "13-05-2021-18-00-27",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "joget-openshift-operator",
+    "starttime": "13-05-2021-18-00-28",
+    "endttime": "13-05-2021-18-01-36",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "jtrac-app-operator",
+    "starttime": "13-05-2021-18-01-37",
+    "endttime": "13-05-2021-18-02-42",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "k10-kasten-operator",
+    "starttime": "13-05-2021-18-02-43",
+    "endttime": "13-05-2021-18-04-12",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "k8s-triliovault",
+    "starttime": "13-05-2021-18-04-13",
+    "endttime": "13-05-2021-18-06-09",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "kong",
+    "starttime": "13-05-2021-18-07-33",
+    "endttime": "13-05-2021-18-23-13",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "kpow-io-certified",
+    "starttime": "13-05-2021-18-23-14",
+    "endttime": "13-05-2021-18-24-21",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "kube-arangodb",
+    "starttime": "13-05-2021-18-24-23",
+    "endttime": "13-05-2021-18-25-31",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "kubemq-operator",
+    "starttime": "13-05-2021-18-26-41",
+    "endttime": "13-05-2021-18-42-19",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "kubeturbo-certified",
+    "starttime": "13-05-2021-18-42-20",
+    "endttime": "13-05-2021-18-43-12",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "linstor-operator",
+    "starttime": "13-05-2021-18-43-13",
+    "endttime": "13-05-2021-18-44-21",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "memql-certified",
+    "starttime": "13-05-2021-18-44-22",
+    "endttime": "13-05-2021-18-45-59",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "mongodb-enterprise",
+    "starttime": "13-05-2021-18-46-00",
+    "endttime": "13-05-2021-19-01-44",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "nastel-navigator-operator-certified",
+    "starttime": "13-05-2021-19-01-45",
+    "endttime": "13-05-2021-19-03-09",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "nastel-xray-operator",
+    "starttime": "13-05-2021-19-03-10",
+    "endttime": "13-05-2021-19-04-50",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "neuvector-certified-operator",
+    "starttime": "13-05-2021-19-04-51",
+    "endttime": "13-05-2021-19-06-46",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "nginx-ingress-operator",
+    "starttime": "13-05-2021-19-06-47",
+    "endttime": "13-05-2021-19-08-11",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "node-red-operator-certified",
+    "starttime": "13-05-2021-19-08-11",
+    "endttime": "13-05-2021-19-09-20",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "nsx-container-plugin-operator",
+    "starttime": "13-05-2021-19-09-21",
+    "endttime": "13-05-2021-19-10-31",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "nuodb-ce-certified",
+    "starttime": "13-05-2021-19-10-32",
+    "endttime": "13-05-2021-19-11-57",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "nvmesh-operator",
+    "starttime": "13-05-2021-19-11-58",
+    "endttime": "13-05-2021-19-13-06",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "nxiq-operator-certified",
+    "starttime": "13-05-2021-19-13-07",
+    "endttime": "13-05-2021-19-14-16",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "nxrm-operator-certified",
+    "starttime": "13-05-2021-19-14-17",
+    "endttime": "13-05-2021-19-15-41",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "oneagent-certified",
+    "starttime": "13-05-2021-19-15-42",
+    "endttime": "13-05-2021-19-18-26",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "open-liberty-certified",
+    "starttime": "13-05-2021-19-18-27",
+    "endttime": "13-05-2021-19-19-52",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "openshiftartifactoryha-operator",
+    "starttime": "13-05-2021-19-19-53",
+    "endttime": "13-05-2021-19-21-19",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "openshiftpipeline-operator",
+    "starttime": "13-05-2021-19-21-20",
+    "endttime": "13-05-2021-19-22-44",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "openshiftxray-operator",
+    "starttime": "13-05-2021-19-22-46",
+    "endttime": "13-05-2021-19-24-11",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "openunison-ocp-certified",
+    "starttime": "13-05-2021-19-24-12",
+    "endttime": "13-05-2021-19-25-38",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "orca",
+    "starttime": "13-05-2021-19-25-39",
+    "endttime": "13-05-2021-19-27-04",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "perceptilabs-operator-package",
+    "starttime": "13-05-2021-19-27-05",
+    "endttime": "13-05-2021-19-28-31",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "percona-server-mongodb-operator-certified",
+    "starttime": "13-05-2021-19-28-32",
+    "endttime": "13-05-2021-19-30-00",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "portshift-controller-operator",
+    "starttime": "13-05-2021-19-31-48",
+    "endttime": "13-05-2021-19-34-04",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "portshift-operator",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "portworx-certified",
+    "starttime": "13-05-2021-19-34-05",
+    "endttime": "13-05-2021-19-35-36",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "presto-operator",
+    "starttime": "0",
+    "endttime": "0",
+    "install": false,
+    "comment": "Skip. Unable to install via automation/manual",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "prisma-cloud-compute-console-operator.v2.0.1",
+    "starttime": "0",
+    "endttime": "0",
+    "install": false,
+    "comment": "Skip. Unable to install via automation/manual",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "rapidbiz-operator-certified",
+    "starttime": "13-05-2021-19-35-38",
+    "endttime": "13-05-2021-19-37-39",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "redhat-marketplace-operator",
+    "starttime": "13-05-2021-19-37-40",
+    "endttime": "13-05-2021-19-40-30",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "redis-enterprise-operator-cert",
+    "starttime": "13-05-2021-19-40-31",
+    "endttime": "13-05-2021-19-43-50",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "rocketchat-operator-certified",
+    "starttime": "13-05-2021-19-43-51",
+    "endttime": "13-05-2021-19-45-23",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "runtime-component-operator-certified",
+    "starttime": "13-05-2021-19-45-24",
+    "endttime": "13-05-2021-19-46-55",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "seldon-deploy-operator",
+    "starttime": "13-05-2021-19-46-56",
+    "endttime": "13-05-2021-19-48-45",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "seldon-operator-certified",
+    "starttime": "13-05-2021-19-48-46",
+    "endttime": "13-05-2021-19-50-25",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "sematext",
+    "starttime": "13-05-2021-19-50-26",
+    "endttime": "13-05-2021-19-52-30",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "snyk-operator-certified",
+    "starttime": "13-05-2021-19-52-31",
+    "endttime": "13-05-2021-19-53-48",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "splunk-certified",
+    "starttime": "13-05-2021-19-53-49",
+    "endttime": "13-05-2021-19-55-23",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "starburst-enterprise-helm-operator",
+    "starttime": "13-05-2021-19-55-24",
+    "endttime": "13-05-2021-19-56-42",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "universalagent-operator-certified",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "storageos",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "storageos2",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "synopsys-certified",
+    "starttime": "13-05-2021-19-56-44",
+    "endttime": "13-05-2021-19-58-18",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "sysdig-certified",
+    "starttime": "13-05-2021-19-58-19",
+    "endttime": "13-05-2021-19-59-39",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "t8c-certified",
+    "starttime": "13-05-2021-19-59-39",
+    "endttime": "13-05-2021-20-01-14",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "tf-operator",
+    "starttime": "13-05-2021-20-01-15",
+    "endttime": "13-05-2021-20-04-52",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "tigera-operator",
+    "starttime": "13-05-2021-20-04-53",
+    "endttime": "13-05-2021-20-06-27",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "timemachine-operator",
+    "starttime": "13-05-2021-20-06-28",
+    "endttime": "13-05-2021-20-08-18",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "traefikee-redhat-certified",
+    "starttime": "13-05-2021-20-08-19",
+    "endttime": "13-05-2021-20-10-25",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "transform-adv-operator",
+    "starttime": "13-05-2021-20-10-26",
+    "endttime": "13-05-2021-20-12-49",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "triggermesh-operator",
+    "starttime": "0",
+    "endttime": "0",
+    "install": true,
+    "comment": "Skip. Unable to install via automation. Installed Manually",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "twistlock-certified",
+    "starttime": "0",
+    "endttime": "0",
+    "install": false,
+    "comment": "Skip. Unable to install via automation/manual",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "uma-operator",
+    "starttime": "13-05-2021-20-12-50",
+    "endttime": "13-05-2021-20-14-09",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "vfunction-server-operator",
+    "starttime": "13-05-2021-20-14-10",
+    "endttime": "13-05-2021-20-29-52",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "vprotect-operator",
+    "starttime": "13-05-2021-20-29-53",
+    "endttime": "13-05-2021-20-46-04",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "name": "wavefront-operator",
+    "starttime": "13-05-2021-20-46-05",
+    "endttime": "13-05-2021-21-01-37",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "xcrypt-operator",
+    "starttime": "13-05-2021-21-01-38",
+    "endttime": "13-05-2021-21-17-16",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "xspc-operator",
+    "starttime": "13-05-2021-21-17-18",
+    "endttime": "13-05-2021-21-32-52",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "yugabyte-operator",
+    "starttime": "13-05-2021-21-32-53",
+    "endttime": "13-05-2021-21-48-30",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "yugabyte-platform-operator-bundle",
+    "starttime": "13-05-2021-21-48-31",
+    "endttime": "13-05-2021-22-04-03",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "zabbix-operator-certified",
+    "starttime": "13-05-2021-22-04-04",
+    "endttime": "13-05-2021-22-19-42",
+    "install": false,
+    "comment": "",
+    "operand": [
+      {
+        "install": false
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "zoperator",
+    "starttime": "13-05-2021-22-19-43",
+    "endttime": "13-05-2021-22-27-05",
+    "install": true,
+    "comment": "",
+    "operand": [
+      {
+        "install": true
+      }
+    ]
+  }
+]

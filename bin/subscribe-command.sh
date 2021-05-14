@@ -158,7 +158,7 @@ EOF
             
             oc delete subscription "$SUB" -n "$OO_INSTALL_NAMESPACE"
             oc delete clusterserviceversion "$CSV" -n "$OO_INSTALL_NAMESPACE"
-            oc delete project "$OO_INSTALL_NAMESPACE"
+            oc delete project --wait=false "$OO_INSTALL_NAMESPACE"
             exit 0
         fi
     fi

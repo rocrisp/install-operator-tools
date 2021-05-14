@@ -10,18 +10,7 @@ if [ -z "$CSV" ] || [ -z "$2" ]; then
 	exit 1
 fi
 
-#make sure tools exist
-if [ ! $(which $INSTALL_YQ 2>/dev/null) ]; then
-	echo -e "ERROR: yq not found. Exiting..."
-	exit 2
-fi
-
-if [ ! $(which $INSTALL_JQ 2>/dev/null) ]; then
-	echo -e "ERROR: jq not found. Exiting..."
-	exit 4
-fi
-
 mkdir -p crs/
 #yq eval '.metadata.annotations.alm-examples' $CSV | jq .[0]
-echo "Run $INSTALL_YQ eval '.metadata.annotations.alm-examples' $CSV | $INSTALL_JQ .[1]"
-for i in $(seq 0 $IDX); do $INSTALL_YQ eval '.metadata.annotations.alm-examples' $CSV | $INSTALL_JQ .[$i] > crs/cr$i.yml; done
+echo "Run yq eval '.metadata.annotations.alm-examples' $CSV | jq .[1]"
+for i in $(seq 0 $IDX); do yq eval '.metadata.annotations.alm-examples' $CSV | jq .[$i] > crs/cr$i.yml; done
