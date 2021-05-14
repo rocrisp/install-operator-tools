@@ -1,7 +1,7 @@
 #!/bin/bash
 
 counter=1
-inputfile=operatorlist/$1
+inputfile=$1
 
 #add array hearder to the json file
 ##{
